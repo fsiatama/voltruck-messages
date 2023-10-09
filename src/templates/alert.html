@@ -1,0 +1,107 @@
+---
+title: "Device Alert"
+preheader: "We would like to inform you that a device issue has been detected."
+bodyClass: bg-slate-50
+---
+
+<x-main>
+  <div class="bg-slate-50 sm:px-4 font-sans">
+    <table align="center">
+      <tr>
+        <td class="w-[552px] max-w-full">
+          <div class="my-12 sm:my-8 text-center">
+            <a href="https://voltruck.com">
+              <img src="images/voltruck.png" width="169" alt="Voltruck">
+            </a>
+          </div>
+
+          <table class="w-full">
+            <tr>
+              <td class="p-12 sm:px-6 text-base text-slate-700 bg-white rounded shadow-sm">
+                <h1 class="m-0 mb-6 text-2xl sm:leading-8 text-black font-semibold">
+                  Dear Device Owner,
+                </h1>
+
+                <p class="m-0 leading-6">
+                  We would like to inform you that an issue has been detected with your device.
+                  Here are the details:
+                </p>
+
+                <x-spacer height="24px" />
+
+                <div class="mt-6 border-t border-gray-500">
+                  <table class="w-[600px] sm:w-full">
+                    <tr>
+                      <td class="w-4/12">
+                        <p class="text-sm font-medium leading-6 text-gray-900">Device ID</p>
+                      </td>
+                      <td class="w-8/12">
+                        <p class="mt-1 text-sm leading-6 text-gray-700">{{deviceId}}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w-4/12">
+                        <p class="text-sm font-medium leading-6 text-gray-900">Error/Warning:</p>
+                      </td>
+                      <td class="w-8/12">
+                        <p class="mt-1 text-sm leading-6 text-gray-700">{{status}}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w-4/12">
+                        <p class="text-sm font-medium leading-6 text-gray-900">Date:</p>
+                      </td>
+                      <td class="w-8/12">
+                        <p class="mt-1 text-sm leading-6 text-gray-700">{{timestamp}}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w-4/12">
+                        <p class="text-sm font-medium leading-6 text-gray-900">Reason:</p>
+                      </td>
+                      <td class="w-8/12">
+                        <p class="mt-1 text-sm leading-6 text-gray-700">{{reason}}</p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <x-spacer height="24px" />
+
+                <p class="m-0 leading-6">
+                  Please take appropriate action to address this issue as soon as possible. If you require further
+                  assistance or have any questions, feel free to contact our support team.
+                </p>
+
+                <x-spacer height="24px" />
+
+                <x-button href="#">
+                  View Device Report &rarr;
+                </x-button>
+
+                <x-divider space-y="32px" class="bg-slate-200" />
+
+                <p class="m-0">
+                  If you didn't sign up for Voltruck, you can safely ignore this email.
+                  <br>
+                  <br>
+                  Thanks, <br />The Voltruck Team
+                </p>
+              </td>
+            </tr>
+            <tr role="separator">
+              <td class="leading-12">&zwj;</td>
+            </tr>
+            <tr>
+              <td class="text-center text-slate-600 text-xs px-6">
+                <p class="m-0 mb-4 uppercase">
+                  Powered by Voltruck
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>
